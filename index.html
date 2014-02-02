@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>See You Space Cowboy...</title>
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:100">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:500">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:700">
+		<link type="text/css" rel="stylesheet" href="./public/css/main.css" charset="utf-8">
+		<script language="javascript" type="text/javascript" src="./public/js/showlayer.js"></script>
+		<script language="javascript" type="text/javascript" src="./public/js/dropdowntabs.js"></script>
+		</head>
+	<body>
+		<div class="crs-header">
+			<div class="crs-logospace">
+				<img alt="Curse logo" src="./public/img/curselogo1.png"></img>
+			</div><!--crs-logospace-->
+			
+			<div id="crs-navlist-dropdown1">
+				<ul class="crs-navlist">
+
+					<li class="crs-navlist-item-a"><a href="#">Nav Item 1</a></li>
+					<li class="crs-navlist-item-a"><a href="#">Nav Item 2</a></li>
+					<li class="crs-navlist-item-a crs-navlist-item-ddm">
+						<span class=""><!--this span tracks dropdown open/closed status in DOM-->
+							<a href="#" rel="dropmenu1_a"> Nav Item 3 &#x25BE;</a>
+						</span><!--not-default>
+						</li><!--This one should get a menu-->
+					<li class="crs-navlist-item-a"><a href="#">Nav Item 4</a></li>
+					<li class="crs-navlist-item-rightend">&nbsp;</li>
+				</ul><!--crs-navlist-->
+
+			</div><!--crs-navlist-dropdown1-->
+
+			<div class="ddcrs-navlist-dropdown1line">&nbsp;</div>
+			
+				<!--1st drop down menu -->                                                   
+				<div id="dropmenu1_a" class="dropmenudiv_a">
+					<a href="#">Sub Nav Item 1</a>
+					<a href="#">Sub Nav Item 2</a>
+					<a href="#">Sub Nav Item 3</a>
+					<a href="#">Longer Sub Nav Item 4</a>
+					<a href="#">Sub Nav Item 5</a>
+				</div>
+			
+			<script type="text/javascript">
+			tabdropdown.init("crs-navlist-dropdown1", 3)
+			</script>
+
+			
+		</div><!--crs-header-->
+		
+		<div class="crs-mainwrapper">
+			<div class="crs-article">
+			
+				<div class="crs-article-title">
+				Outer Space Things
+				</div><!--crs-article-title-->
+
+				<div class="crs-article-body">
+				<p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science. NASA is not about the &quot;Adventure of Human Space Exploration&quot;... We won't be doing it just to get out there in space -- we'll be doing it because the things we learn out there will be making life better for a lot of people who won't be able to go.</p><br />
+				<p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her. To be the first to enter the cosmos, to engage, single-handed, in an unprecedented duel with nature -- could one dream of anything more?</p><br />
+				<p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development. As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p><br />
+				<p>Where ignorance lurks, so too do the frontiers of discovery and imagination.</p>
+				<p>We have an infinite amount to learn both from nature and from each other.</p>
+				<p>There can be no thought of finishing for 'aiming for the stars.' Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p><br />
+				</div><!--crs-article-body-->
+
+			</div><!--crs-article-->
+			
+			<div class="crs-sidebar">
+			
+				<div class="crs-sidebar-expander">
+					<div class="crs-sidebar-exp-title">
+					<a href="#" onclick="javascript:showlayer('sb_1','gl_1')">Like Whoa Dude <span id=gl_1>&#x25B4;</span></a>
+					</div><!--crs-sidebar-exp-title-->
+					<div class="crs-sidebar-exp-text" id="sb_1" style="display:block;">
+					<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center -- an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+					</div><!--crs-sidebar-exp-text-->
+				</div><!--crs-sidebar-expander-->
+			
+				<div class="crs-sidebar-expander">
+					<div class="crs-sidebar-exp-title">
+					<a href="#" onclick="javascript:showlayer('sb_2','gl_2')">Totally Sweet <span id=gl_2>&#x25B4;</span></a>
+					</div><!--crs-sidebar-exp-title-->
+					<div class="crs-sidebar-exp-text" id="sb_2" style="display:block;">
+					<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center -- an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+					</div><!--crs-sidebar-exp-text-->
+				</div><!--crs-sidebar-expander-->
+				
+				<div class="crs-sidebar-expander">
+					<div class="crs-sidebar-exp-title">
+					<a href="#" onclick="javascript:showlayer('sb_3','gl_3')">Astronaut High <span id=gl_3>&#x25BE;</span></a>
+					</div><!--crs-sidebar-exp-title-->
+					<div class="crs-sidebar-exp-text" id="sb_3" style="display:none;">
+					<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center -- an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+					</div><!--crs-sidebar-exp-text-->
+				</div><!--crs-sidebar-expander-->				
+			
+			</div><!--crs-sidebar-->
+		</div><!--crs-mainwrapper-->
+				
+	</body>
+</html>
