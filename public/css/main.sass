@@ -1,11 +1,11 @@
 /* Begin Reset
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
-  margin: 0
-  padding: 0
   border: 0
   font-size: 100%
   font: inherit
+  margin: 0
+  padding: 0
   vertical-align: baseline
 
 /* HTML5 display-role reset for older browsers
@@ -42,23 +42,29 @@ table
 
 @media all and (max-width: 940px)
   .crs-logospace
-    display: none !important
+    left: 20px !important
 
-@media all and (max-width: 670px)
+@media all and (max-width: 840px)
+  .crs-logospace
+    top: 0px !important
   .crs-article
     width: 100% !important
   .crs-header, .crs-navlist, .crs-navlist-item-a, .crs-navlist-item-rightend
-    height: 40px !important
+    height: 70px !important
     margin: 0 !important
   .crs-navlist
+    top: 48px !important
     right: 0px !important
-    min-width: 100%
+    left: 25px !important
+    min-width: 100% !important
+    overflow: hidden !important
   .crs-navlist-item-a
+    background: #333
     display: inline
   .crs-header, .crs-navlist, .crs-navlist-item-a
     padding: 0 10px 0 10px !important
   .crs-navlist-item-rightend
-    padding: 0 !important
+    display: none
   .crs-sidebar
     float: left
     width: 100% !important
@@ -206,3 +212,4 @@ ul li
   /* For browsers not IE
   min-width: 940px
   min-height: 600px
+  overflow: hidden
