@@ -40,6 +40,29 @@ table
 
 /* Begin Main Stylesheet
 
+@media all and (max-width: 940px)
+  .crs-logospace
+    display: none !important
+
+@media all and (max-width: 670px)
+  .crs-article
+    width: 100% !important
+  .crs-header, .crs-navlist, .crs-navlist-item-a, .crs-navlist-item-rightend
+    height: 40px !important
+    margin: 0 !important
+  .crs-navlist
+    right: 0px !important
+    min-width: 100%
+  .crs-navlist-item-a
+    display: inline
+  .crs-header, .crs-navlist, .crs-navlist-item-a
+    padding: 0 10px 0 10px !important
+  .crs-navlist-item-rightend
+    padding: 0 !important
+  .crs-sidebar
+    float: left
+    width: 100% !important
+
 a
   color: white
   text-decoration: none
@@ -57,6 +80,7 @@ ul li
 .crs-article
   float: left
   width: 65%
+  margin-left: 5px
 
 .crs-article-title
   font-family: "Roboto"
@@ -89,7 +113,7 @@ ul li
 .crs-header
   background: none repeat scroll 0 0 #444
   font-weight: 600
-  height: 85px
+  height: 86px
   top: 0
   width: 100%
   -moz-box-shadow: inset 0px -35px 35px #333333
@@ -97,11 +121,12 @@ ul li
   box-shadow: inset 0px -35px 35px #333333
 
 .crs-logospace
-  display: block
   position: absolute
   top: 15px
   left: 100px
   max-width: 200px
+  overflow: hidden
+  z-index: 9999
 
 .crs-navlist-item-rightend
   height: 100%
@@ -122,6 +147,7 @@ ul li
 .crs-sidebar
   float: right
   width: 30%
+  margin-right: 5px
 
 .crs-sidebar-expander
   border: solid 1px black
@@ -175,7 +201,8 @@ ul li
 .dropmenudiv_a a:hover
   background-color: #333
   color: white
-  
-.size-enforcer
+
+.size_enforcer
+  /* For browsers not IE
   min-width: 940px
   min-height: 600px
