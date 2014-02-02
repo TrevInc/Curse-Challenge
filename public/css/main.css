@@ -208,3 +208,8 @@ ul li { display: inline; }
 	background-color: #333;
 	color: white;
 }
+
+.size_enforcer {
+	min-width: 940px;
+	min-height: 600px;
+}
