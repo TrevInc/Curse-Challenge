@@ -1,0 +1,17 @@
+Reference: 1200x800
+
+Exported:
+
+Curse logo - curselogo1.png
+Dropdown glyph - dropdownglyph1.png
+Dropdown glyph, inverted - dropdownglyph2.png
+
+Background: #222
+Navbar: #333 to #444, center gradient, 140px (abt 12.5%) wide buttons, 80px tall
+Selected subnav: #282828
+Bodytext: #fff
+Sidebar block: #c5c5c5, 300px width (25%)
+Gutters: 120px (10%)
+Logo: 100px absolute from left, 10px from top
+
+combine border-left and border-right colors for beveled divider	

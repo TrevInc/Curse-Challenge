@@ -21,11 +21,15 @@
 
 					<li class="crs-navlist-item-a"><a href="#">Nav Item 1</a></li>
 					<li class="crs-navlist-item-a"><a href="#">Nav Item 2</a></li>
-					<li class="crs-navlist-item-a crs-navlist-item-ddm">
+					
 						<span class=""><!--this span tracks dropdown open/closed status in DOM-->
-							<a href="#" rel="dropmenu1_a"> Nav Item 3 &#x25BE;</a>
+							<a href="#" rel="dropmenu1_a">
+							  <li class="crs-navlist-item-a crs-navlist-item-ddm">
+							    Nav Item 3 &#x25BE;
+							  </li><!--This one should get a menu-->
+							</a>
 						</span><!--not-default-->
-						</li><!--This one should get a menu-->
+
 					<li class="crs-navlist-item-a"><a href="#">Nav Item 4</a></li>
 					<li class="crs-navlist-item-rightend">&nbsp;</li>
 				</ul><!--crs-navlist-->
@@ -72,7 +76,7 @@
 			
 				<div class="crs-sidebar-expander">
 					<div class="crs-sidebar-exp-title">
-					<a href="#" onclick="javascript:showlayer('sb_1','gl_1')">Like Whoa Dude <span id=gl_1>&#x25B4;</span></a>
+					<a onclick="javascript:showlayer('sb_1','gl_1')">Like Whoa Dude <span class="crs-dd-open" id=gl_1>&#x25B4;</span></a>
 					</div><!--crs-sidebar-exp-title-->
 					<div class="crs-sidebar-exp-text" id="sb_1" style="display:block;">
 					<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center -- an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
@@ -81,7 +85,7 @@
 			
 				<div class="crs-sidebar-expander">
 					<div class="crs-sidebar-exp-title">
-					<a href="#" onclick="javascript:showlayer('sb_2','gl_2')">Totally Sweet <span id=gl_2>&#x25B4;</span></a>
+					<a onclick="javascript:showlayer('sb_2','gl_2')">Totally Sweet <span class="crs-dd-open" id=gl_2>&#x25B4;</span></a>
 					</div><!--crs-sidebar-exp-title-->
 					<div class="crs-sidebar-exp-text" id="sb_2" style="display:block;">
 					<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center -- an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
@@ -90,7 +94,7 @@
 				
 				<div class="crs-sidebar-expander">
 					<div class="crs-sidebar-exp-title">
-					<a href="#" onclick="javascript:showlayer('sb_3','gl_3')">Astronaut High <span id=gl_3>&#x25BE;</span></a>
+					<a onclick="javascript:showlayer('sb_3','gl_3')">Astronaut High <span class="crs-dd-closed" id=gl_3>&#x25BE;</span></a>
 					</div><!--crs-sidebar-exp-title-->
 					<div class="crs-sidebar-exp-text" id="sb_3" style="display:none;">
 					<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center -- an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>

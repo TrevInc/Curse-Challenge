@@ -4,10 +4,12 @@
 //  Created  2007 MAY 16
 //  Modified 2014 FEB 01
 
+//  Modified to allow dropdown on click instead of on hover for touchscreens
+
 var tabdropdown={
 
 	// Common variables moved to top for easy changes
-	disappeardelay: 200, // set delay in milliseconds before menu disappears onmouseout
+	disappeardelay: 1500, // set delay in milliseconds before menu disappears onmouseout
 	disablemenuclick: false, // when user clicks on a menu item with a drop down menu, disable menu item's link?
 	enableiframeshim: 1, // 1 or 0, for true or false
 	mediabreakpoint: 480, // maximum width of browser window (in pixels) before menu becomes responsive (in this case, onlick toggle)
@@ -32,7 +34,8 @@ var tabdropdown={
 	showhide:function(obj, e, obj2){ // obj refers to drop down menu, obj2 refers to tab menu item mouse is currently over
 		if (this.ie || this.firefox)
 			this.dropmenuobj.style.left=this.dropmenuobj.style.top="-500px"
-		if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover"){
+		//if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover"){
+		if (e.type=="click" || e.type=="mouseover"){
 			if (obj2.parentNode.className.indexOf("default")==-1) //if tab isn't a default selected one
 				obj2.parentNode.className="selected"
 			this.showhidemenu('show')
