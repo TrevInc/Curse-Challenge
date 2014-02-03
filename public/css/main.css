@@ -111,6 +111,12 @@ a {
 	cursor: pointer;
 }
 
+a:hover > .crs-navlist-item-ddm {
+	-moz-box-shadow: inset 0px -35px 35px #777;
+	-webkit-box-shadow: inset 0px -35px 35px #777;
+	box-shadow: inset 0px -35px 35px #777;	
+}
+
 body {
 	background: #222;
 	color: white;
