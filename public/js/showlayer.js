@@ -1,27 +1,23 @@
-// Layer and Glyph Toggle for Open/Close Boxes
+// Layer and Glyph Toggle for Open/Close Boxes using jQuery
 // Anthony Bellew
-// Created 2014 FEB 01
+// Created 2014 FEB 04
 // Displays/hides selected element and toggles the selected Unicode arrow glyph.
 
-function showlayer(layer,glyph){
-
-	var myLayer = document.getElementById(layer);
-	var myGlyph = document.getElementById(glyph);
-	
-	if(myLayer.style.display=="none" || myLayer.style.display==""){
-		myLayer.style.display="block";
-		myGlyph.textContent="";
-		myGlyph.className="crs-dd-open";
-		var upPic = document.createElement('img');
-		upPic.setAttribute('src','./public/img/dropdown1.png');
-		myGlyph.appendChild(upPic);
-	} else { 
-		myLayer.style.display="none";
-		myGlyph.textContent="";
-		myGlyph.className="crs-dd-closed";
-		var upPic = document.createElement('img');
-		upPic.setAttribute('src','./public/img/dropdown2.png');
-		myGlyph.appendChild(upPic);
-	}
-
-}
+jQuery(function($){ 
+	$( document ).ready(function(){
+		$('.expander-link').bind('click', function() {
+		  var myLayer = $(this).next();
+		  var myGlyph = $(this).find('.crs-dd');
+		  
+		  if($(myLayer).css("display")=="none") {
+				$(myLayer).css({"display":"block"});
+				$(myGlyph).removeClass("crs-dd-closed");
+				$(myGlyph).addClass("crs-dd-open");
+			} else { 
+				$(myLayer).css({"display":"none"});
+				$(myGlyph).removeClass("crs-dd-open");
+				$(myGlyph).addClass("crs-dd-closed");
+			}
+		});
+	});
+});

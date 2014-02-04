@@ -15,3 +15,5 @@ Gutters: 120px (10%)
 Logo: 100px absolute from left, 10px from top
 
 combine border-left and border-right colors for beveled divider	
+
+Feedback: change onclick JS to jquery selector
