@@ -5,6 +5,7 @@
 //  Modified 2014 FEB 01
 
 //  Modified to allow dropdown on click instead of on hover for touchscreens
+//  Modified for Chrome location detection
 
 var tabdropdown={
 
@@ -12,10 +13,10 @@ var tabdropdown={
 	disappeardelay: 1500, // set delay in milliseconds before menu disappears onmouseout
 	disablemenuclick: false, // when user clicks on a menu item with a drop down menu, disable menu item's link?
 	enableiframeshim: 1, // 1 or 0, for true or false
-	mediabreakpoint: 480, // maximum width of browser window (in pixels) before menu becomes responsive (in this case, onlick toggle)
+	mediabreakpoint: 480, // maximum width of browser window (in pixels) before menu becomes responsive (in this case, onclick toggle)
 	corneroffsetx: 20, //offsets for corner of dropdown from anchor
 	corneroffsety: 30,
-	
+	smallmodesize: 840, //viewport width size at which displacement chages
 	
 	dropmenuobj: null, ie: document.all, firefox: document.getElementById&&!document.all, previousmenuitem:null,
 	currentpageurl: window.location.href.replace("http://"+window.location.hostname, "").replace(/^\//, ""), //get current page url (minus hostname)
@@ -97,11 +98,20 @@ var tabdropdown={
 			this.showhide(this.dropmenuobj.style, e, obj)
 			this.dropmenuobj.x=this.getposOffset(obj, "left")
 			this.dropmenuobj.y=this.getposOffset(obj, "top")
-			this.dropmenuobj.style.left=this.dropmenuobj.x-this.clearbrowseredge(obj, "rightedge")-20+"px"
+			this.dropmenuobj.style.left=this.dropmenuobj.x-this.clearbrowseredge(obj, "rightedge")+"px"
 			this.dropmenuobj.style.top=this.dropmenuobj.y-this.clearbrowseredge(obj, "bottomedge")+30+obj.offsetHeight+1+"px"
 			this.previousmenuitem=obj // remember main menu item mouse moved out from (and into current menu item)
 			this.positionshim() // call iframe shim function
 		}
+		if(window.innerWidth < 840) {
+			this.dropmenuobj.style.top=this.dropmenuobj.y-this.clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+1+"px"
+			console.log(window.innerWidth)
+		}
+		if((window.innerWidth >= 840) && window.chrome ) { //fix for Chrome 30 object border detection
+			this.dropmenuobj.style.top=this.dropmenuobj.y-this.clearbrowseredge(obj, "bottomedge")+60+obj.offsetHeight+2+"px"
+			console.log(window.innerWidth)
+		}
+		
 	},
 
 	contains_firefox:function(a, b) {
