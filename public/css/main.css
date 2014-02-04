@@ -72,6 +72,15 @@ table {
 	width: 100% !important;
   }
 
+  span .crs-dd-closed {
+	background-image:url('./public/img/dropdown2.png');
+  }
+
+  span .crs-dd-open {
+	background-image:url('./public/img/dropdown2.png');
+  }
+
+  
   .crs-header, .crs-navlist, .crs-navlist-item-a, .crs-navlist-item-rightend  {
 	height: 70px !important;
 	margin: 0 !important;

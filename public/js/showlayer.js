@@ -10,10 +10,18 @@ function showlayer(layer,glyph){
 	
 	if(myLayer.style.display=="none" || myLayer.style.display==""){
 		myLayer.style.display="block";
-		myGlyph.textContent="\u25B4";
+		myGlyph.textContent="";
+		myGlyph.className="crs-dd-open";
+		var upPic = document.createElement('img');
+		upPic.setAttribute('src','./public/img/dropdown1.png');
+		myGlyph.appendChild(upPic);
 	} else { 
 		myLayer.style.display="none";
-		myGlyph.textContent="\u25BE";
+		myGlyph.textContent="";
+		myGlyph.className="crs-dd-closed";
+		var upPic = document.createElement('img');
+		upPic.setAttribute('src','./public/img/dropdown2.png');
+		myGlyph.appendChild(upPic);
 	}
 
 }
