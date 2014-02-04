@@ -55,14 +55,6 @@ table {
   }
 }
 
-/*
-#@media all and (max-width: 860px) {
-#  .crs-logospace {
-#	display: none !important;
-#  }
-#}
-*/
-
 @media all and (max-width: 840px) {
   .crs-logospace {
     top: 0px !important;
@@ -281,10 +273,4 @@ ul li { display: inline; }
 .dropmenudiv_a a:hover{
 	background-color: #333;
 	color: white;
-}
-
-.size_enforcer { /* For browsers not IE */
-	min-width: 940px;
-	min-height: 600px;
-	overflow: hidden;
 }
