@@ -10,7 +10,7 @@
 var tabdropdown={
 
 	// Common variables moved to top for easy changes
-	disappeardelay: 1500, // set delay in milliseconds before menu disappears onmouseout
+	disappeardelay: 1000, // set delay in milliseconds before menu disappears onmouseout
 	disablemenuclick: false, // when user clicks on a menu item with a drop down menu, disable menu item's link?
 	enableiframeshim: 1, // 1 or 0, for true or false
 	mediabreakpoint: 480, // maximum width of browser window (in pixels) before menu becomes responsive (in this case, onclick toggle)
