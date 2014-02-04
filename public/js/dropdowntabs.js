@@ -10,7 +10,7 @@
 var tabdropdown={
 
 	// Common variables moved to top for easy changes
-	disappeardelay: 1000, // set delay in milliseconds before menu disappears onmouseout
+	disappeardelay: 200, // set delay in milliseconds before menu disappears onmouseout
 	disablemenuclick: false, // when user clicks on a menu item with a drop down menu, disable menu item's link?
 	enableiframeshim: 1, // 1 or 0, for true or false
 	mediabreakpoint: 480, // maximum width of browser window (in pixels) before menu becomes responsive (in this case, onclick toggle)
@@ -35,13 +35,13 @@ var tabdropdown={
 	showhide:function(obj, e, obj2){ // obj refers to drop down menu, obj2 refers to tab menu item mouse is currently over
 		if (this.ie || this.firefox)
 			this.dropmenuobj.style.left=this.dropmenuobj.style.top="-500px"
-		//if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover"){
-		if (e.type=="click" || e.type=="mouseover"){
-			if (obj2.parentNode.className.indexOf("default")==-1) //if tab isn't a default selected one
-				obj2.parentNode.className="selected"
+		if (e.type=="click"){
+			//if (obj2.parentNode.className.indexOf("default")==-1) //if tab isn't a default selected one
+			//	obj2.parentNode.className="selected"
+			obj.visibility="visible";
 			this.showhidemenu('show')
 			}
-		else if (e.type=="click"){
+		else if (e.type=="click" && obj.visibility==hidden){
 			this.showhidemenu('hide')
 		}
 	},
@@ -103,11 +103,11 @@ var tabdropdown={
 			this.previousmenuitem=obj // remember main menu item mouse moved out from (and into current menu item)
 			this.positionshim() // call iframe shim function
 		}
-		if(window.innerWidth < 840) {
+		if(window.innerWidth < this.smallmodesize) {
 			this.dropmenuobj.style.top=this.dropmenuobj.y-this.clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+1+"px"
 			console.log(window.innerWidth)
 		}
-		if((window.innerWidth >= 840) && window.chrome ) { //fix for Chrome 30 object border detection
+		if((window.innerWidth >= this.smallmodesize) && window.chrome ) { //fix for Chrome 30 object border detection
 			this.dropmenuobj.style.top=this.dropmenuobj.y-this.clearbrowseredge(obj, "bottomedge")+60+obj.offsetHeight+2+"px"
 			console.log(window.innerWidth)
 		}
@@ -175,7 +175,7 @@ isSelected:function(menuurl){
 			if (menuitems[i].getAttribute("rel")){
 				var relvalue=menuitems[i].getAttribute("rel")
 				document.getElementById(relvalue).firstlink=document.getElementById(relvalue).getElementsByTagName("a")[0]
-				menuitems[i]["onmouseover"]=function(e){
+				menuitems[i]["onclick"]=function(e){
 					var event=typeof e!="undefined"? e : window.event
 					tabdropdown.dropit(this, event, this.getAttribute("rel"))
 					e.stopPropagation()

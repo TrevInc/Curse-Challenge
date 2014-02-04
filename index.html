@@ -7,7 +7,9 @@
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:700">
 		<link type="text/css" rel="stylesheet" href="./public/css/main.css" charset="utf-8">
 		<script language="javascript" type="text/javascript" src="./public/js/showlayer.js"></script>
-		<script language="javascript" type="text/javascript" src="./public/js/dropdowntabs.js"></script>
+		<script language="javascript" type="text/javascript" src="./public/js/jquery-1.11.0.min.js"></script>		
+		<script language="javascript" type="text/javascript" src="./public/js/bootstrap.dropdown.js"></script>
+		<!--script language="javascript" type="text/javascript" src="./public/js/dropdowntabs.js"></script-->
 		</head>
 	<body>
 		<div class="size-enforcer">
@@ -22,12 +24,20 @@
 					<li class="crs-navlist-item-a"><a href="#">Nav Item 1</a></li>
 					<li class="crs-navlist-item-a"><a href="#">Nav Item 2</a></li>
 					
-						<span class=""><!--this span tracks dropdown open/closed status in DOM-->
-							<a href="#" rel="dropmenu1_a">
+						<span class="dropdown"><!--this span tracks dropdown open/closed status in DOM-->
+							<a href="#" rel="dropmenu1_a" data-toggle="dropdown" data-hex="null">
 							  <li class="crs-navlist-item-a crs-navlist-item-ddm">
 							    Nav Item 3 <img src="./public/img/dropdown2.png" />
 							  </li><!--This one should get a menu-->
+								
 							</a>
+								<ul class="crs-navlist-b dropdown-menu" style="display:none;">
+									<a><li>Thing 1</li></a>
+									<a><li>Thing 2</li></a>
+									<a><li>Thing 3</li></a>
+									<a><li>Longer Thing 4</li></a>
+									<a><li>Thing 5</li></a>
+								</ul>
 						</span><!--not-default-->
 
 					<li class="crs-navlist-item-a"><a href="#">Nav Item 4</a></li>
@@ -47,9 +57,9 @@
 					<a href="#">Sub Nav Item 5</a>
 				</div>
 			
-			<script type="text/javascript">
+			<!--script type="text/javascript">
 			tabdropdown.init("crs-navlist-dropdown1", 3)
-			</script>
+			</script-->
 
 			
 		</div><!--crs-header-->
