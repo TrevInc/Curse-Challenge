@@ -1,6 +1,8 @@
 /* Boilerplate Mixins */
 
 @import 'box-shadow'
+@import 'moz-border-colors'
+
 
 /* Begin Reset */
 
@@ -270,11 +272,7 @@ ul li {
   }
   .dropdown-menu {
     display: block !important;
-	/* Mozilla, please make this DRY */
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
+    @include moz-border-colors(none);
     background: none repeat scroll 0 0 #333333;
     border: 0px;
     color: #FFFFFF;
