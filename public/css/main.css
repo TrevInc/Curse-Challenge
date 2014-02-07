@@ -1,300 +1,282 @@
+/* Import Mixin */
 /* Begin Reset */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
-blockquote:before, blockquote:after,
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
 q:before, q:after {
-	content: '';
-	content: none;
+  content: "";
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* End Reset */
-
 /* Begin Media Query Section */
-
 @media all and (max-width: 940px) {
   .crs-logospace {
-	left: 20px !important;
+    left: 20px !important;
   }
 }
-
 @media all and (max-width: 840px) {
   .crs-logospace {
     top: 0px !important;
   }
 
   .crs-article {
-	width: 100% !important;
+    width: 100% !important;
   }
 
   .dropdown.open > .dropdown-menu {
-	left: 17px !important;
-	top: 20px !important;
-	max-height: 30px;
+    left: 17px !important;
+    top: 20px !important;
+    max-height: 30px;
   }
-  
+
   .crs-navlist-b.dropdown-menu > a > li {
-	border-right: 1px solid #444;
-	display: inline-table !important;
+    border-right: 1px solid #444444;
+    display: inline-table !important;
   }
-  
-  .crs-header, .crs-navlist, .crs-navlist-item-a, .crs-navlist-item-rightend  {
-	height: 70px !important;
-	margin: 0 !important;
+
+  .crs-header, .crs-navlist, .crs-navlist-item-a, .crs-navlist-item-rightend {
+    height: 70px !important;
+    margin: 0 !important;
   }
 
   .crs-navlist {
     top: 48px !important;
     right: 0px !important;
-	left: 25px !important;
-	min-width: 100% !important;
-	overflow: hidden !important;
+    left: 25px !important;
+    min-width: 100% !important;
+    overflow: hidden !important;
   }
- 
+
   .crs-navlist-item-a {
-	background: #333;
-	display: inline;
+    background: #333333;
+    display: inline;
   }
- 
-  .crs-header, .crs-navlist, .crs-navlist-item-a {  
-  	padding: 0 10px 0 10px !important;
+
+  .crs-header, .crs-navlist, .crs-navlist-item-a {
+    padding: 0 10px 0 10px !important;
   }
-  
+
   .crs-navlist-item-rightend {
-	display: none;
+    display: none;
   }
-  
+
   .crs-sidebar {
-	float: left;
-	width: 100% !important;
+    float: left;
+    width: 100% !important;
   }
 }
-
 /* End Media Query Section */
-
 /* Begin Main Stylesheet */
-
 /* General Rules */
-
-
 a {
-	color: white;
-	text-decoration:none;
-	cursor: pointer;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
-
 a:hover > .crs-navlist-item-a {
-	-moz-box-shadow: inset 0px -35px 35px #666;
-	-webkit-box-shadow: inset 0px -35px 35px #666;
-	box-shadow: inset 0px -35px 35px #666;	
+  -moz-box-shadow: inset 0px -35px 35px #666666;
+  -webkit-box-shadow: inset 0px -35px 35px #666666;
+  box-shadow: inset 0px -35px 35px #666666;
 }
 
 body {
-	background: #222;
-	color: white;
-	font-family: "Open Sans",sans-serif;
-	font-size: 13px;
-	line-height: 140%; 
-	min-width: 500px;
+  background: #222222;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  line-height: 140%;
+  min-width: 500px;
 }
 
-ul li { display: inline; }
+ul li {
+  display: inline;
+}
 
 /* Class Specific Rules */
-
 .crs-navlist-b.dropdown-menu > a:hover > li {
-	background-color:#444;
+  background-color: #444444;
 }
-
 .crs-navlist-b.dropdown-menu > a > li {
-    border-bottom: 1px solid #777777;
-    display: list-item;
-    font-size: 12pt;
-    letter-spacing: normal;
-    padding: 5px;
+  border-bottom: 1px solid #777777;
+  display: list-item;
+  font-size: 12pt;
+  letter-spacing: normal;
+  padding: 5px;
 }
 
 .crs-article {
-	float: left;
-	width: 65%;
-	margin-left: 5px;
+  float: left;
+  width: 65%;
+  margin-left: 5px;
 }
 
 .crs-article-title {
-	font-family: "Roboto";
-	font-size: 40px;
-	font-weight: 100;
-	padding-top: 10px;
-	padding-bottom: 30px;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-weight: 100;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .crs-dd {
-	background-size:100% 100%;
-	background-repeat:no-repeat;
-	width: auto;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: auto;
 }
 
 .crs-dd-open {
-	background-image:url('../img/dropdown1.png');
+  background-image: url("../img/dropdown1.png");
 }
 
-.crs-dd-closed{
-	background-image:url('../img/dropdown2.png');
+.crs-dd-closed {
+  background-image: url("../img/dropdown2.png");
 }
 
 .crs-mainwrapper {
-	display: block;
-	margin-top: 18px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1000px;
-
+  display: block;
+  margin-top: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
 }
 
 .crs-navlist {
-
-	display: inline;
-	font-family: "Roboto";
-	font-size: 16px;
-	font-weight: 700;
-	height: 85px;
-	letter-spacing: 1px;
-    list-style: none outside none;
-	list-style-type: none;
-	position: absolute;
-	right: 100px;
-	margin-top:35px; /* negative half of the height */
-
+  display: inline;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 700;
+  height: 85px;
+  letter-spacing: 1px;
+  list-style: none outside none;
+  list-style-type: none;
+  position: absolute;
+  right: 100px;
+  margin-top: 35px;
+  /* negative half of the height */
 }
 
 .crs-header {
-    background: none repeat scroll 0 0 #444;
-    font-weight: 600;
-	height: 86px;
-    top: 0;
-    width: 100%;
-	-moz-box-shadow: inset 0px -35px 35px #333;
-	-webkit-box-shadow: inset 0px -35px 35px #333;
-	box-shadow: inset 0px -35px 35px #333;
-
+  background: none repeat scroll 0 0 #444444;
+  font-weight: 600;
+  height: 86px;
+  top: 0;
+  width: 100%;
+  -webkit-box-shadow: inset 0px -35px 35px #333333;
+  -moz-box-shadow: inset 0px -35px 35px #333333;
+  box-shadow: inset 0px -35px 35px #333333;
 }
 
 .crs-logospace {
-	position: absolute;
-	top: 15px;
-	left: 100px;
-	max-width: 200px;
-	overflow: hidden;
-	z-index: 9999;
+  position: absolute;
+  top: 15px;
+  left: 100px;
+  max-width: 200px;
+  overflow: hidden;
+  z-index: 9999;
 }
 
 .crs-navlist-item-rightend {
-	height: 100%;
-	content: "-";
-	padding: 30px 1px 30px 1px;
-	box-shadow: -1px 0px 1px #555;
-	border-left: solid 1px #222;
+  height: 100%;
+  content: "-";
+  padding: 30px 1px 30px 1px;
+  box-shadow: -1px 0px 1px #555555;
+  border-left: solid 1px #222222;
 }
 
 .crs-navlist-item-a {
-	height: 100%;
-	margin: 0px;
-	padding: 30px 20px 30px 20px;
-	box-shadow: -1px 0px 1px #555;
-	border-left: solid 1px #222;
+  height: 100%;
+  margin: 0px;
+  padding: 30px 20px 30px 20px;
+  box-shadow: -1px 0px 1px #555555;
+  border-left: solid 1px #222222;
 }
-
 .crs-navlist-item-a:last-of-type {
-	border-right: solid 1px #222;
+  border-right: solid 1px #222222;
 }
 
 .crs-sidebar {
-	float: right;
-	width: 30%;
-	margin-right: 5px;
+  float: right;
+  width: 30%;
+  margin-right: 5px;
 }
 
 .crs-sidebar-expander {
-	border: solid 1px black;
-	margin-bottom: 20px;
+  border: solid 1px black;
+  margin-bottom: 20px;
 }
 
 .crs-sidebar-exp-title {
-	background: black;
-	margin: 0;
-	padding: 10px 10px 10px 16px;
-	color: white;
-	font-family: "Roboto";
-	font-weight: 100;
-	font-size: 18pt;
-	text-transform: uppercase;
+  background: black;
+  margin: 0;
+  padding: 10px 10px 10px 16px;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: 18pt;
+  text-transform: uppercase;
 }
 
 .crs-sidebar-exp-text {
-	color: black;
-	background: #c5c5c5;
-	font-size: 9pt;
-	font-weight: 600;
-	padding: 5px 8px 8px 8px;
+  color: black;
+  background: #c5c5c5;
+  font-size: 9pt;
+  font-weight: 600;
+  padding: 5px 8px 8px 8px;
 }
 
 .dropdown.open > a > .crs-navlist-item-a {
-	-moz-box-shadow: inset 0px -35px 35px #777;
-	-webkit-box-shadow: inset 0px -35px 35px #777;
-	box-shadow: inset 0px -35px 35px #777;
+  -webkit-box-shadow: inset 0px -35px 35px #777777;
+  -moz-box-shadow: inset 0px -35px 35px #777777;
+  box-shadow: inset 0px -35px 35px #777777;
 }
-
 .dropdown.open > .dropdown-menu {
-    display: block !important;
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background: none repeat scroll 0 0 #333333;
-	border: 0px;
-    color: #FFFFFF;
-    left: 268px;
-    margin-top: 2px;
-    min-width: 160px;
-    position: absolute;
-    text-align: left;
-    top: 50px;
-    z-index: 100;
+  display: block !important;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: none repeat scroll 0 0 #333333;
+  border: 0px;
+  color: white;
+  left: 268px;
+  margin-top: 2px;
+  min-width: 160px;
+  position: absolute;
+  text-align: left;
+  top: 50px;
+  z-index: 100;
 }
