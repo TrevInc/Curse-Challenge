@@ -42,6 +42,64 @@ table {
 }
 
 /* End Reset */
+/* Begin Media Query Section */
+@media all and (max-width: 940px) {
+  .crs-logospace {
+    left: 20px !important;
+  }
+}
+@media all and (max-width: 840px) {
+  .crs-logospace {
+    top: 0px !important;
+  }
+
+  .crs-article {
+    width: 100% !important;
+  }
+
+  .dropdown.open > .dropdown-menu {
+    left: 17px !important;
+    top: 20px !important;
+    max-height: 30px;
+  }
+
+  .crs-navlist-b.dropdown-menu > a > li {
+    border-right: 1px solid #444444;
+    display: inline-table !important;
+  }
+
+  .crs-header, .crs-navlist, .crs-navlist-item-a, .crs-navlist-item-rightend {
+    height: 70px !important;
+    margin: 0 !important;
+  }
+
+  .crs-navlist {
+    top: 48px !important;
+    right: 0px !important;
+    left: 25px !important;
+    min-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .crs-navlist-item-a {
+    background: #333333;
+    display: inline;
+  }
+
+  .crs-header, .crs-navlist, .crs-navlist-item-a {
+    padding: 0 10px 0 10px !important;
+  }
+
+  .crs-navlist-item-rightend {
+    display: none;
+  }
+
+  .crs-sidebar {
+    float: left;
+    width: 100% !important;
+  }
+}
+/* End Media Query Section */
 /* Begin Main Stylesheet */
 /* General Rules */
 a {
@@ -214,7 +272,7 @@ ul li {
   box-shadow: inset 0px -35px 35px #777777;
 }
 .dropdown.open > .dropdown-menu {
-  display: block;
+  display: block !important;
   -moz-border-bottom-colors: none;
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
@@ -230,63 +288,3 @@ ul li {
   top: 50px;
   z-index: 100;
 }
-
-/* End Main Stylesheet */
-/* Begin Media Query Overrides */
-@media all and (max-width: 940px) {
-  .crs-logospace {
-    left: 20px;
-  }
-}
-@media all and (max-width: 840px) {
-  .crs-logospace {
-    top: 0px;
-  }
-
-  .crs-article {
-    width: 100%;
-  }
-
-  .dropdown.open > .dropdown-menu {
-    left: 17px;
-    top: 20px;
-    max-height: 30px;
-  }
-
-  .crs-navlist-b.dropdown-menu > a > li {
-    border-right: 1px solid #444444;
-    display: inline-table;
-  }
-
-  .crs-header, .crs-navlist, .crs-navlist-item-a, .crs-navlist-item-rightend {
-    height: 70px;
-    margin: 0;
-  }
-
-  .crs-navlist {
-    top: 48px;
-    right: 0px;
-    left: 25px;
-    min-width: 100%;
-    overflow: hidden;
-  }
-
-  .crs-navlist-item-a {
-    background: #333333;
-    display: inline;
-  }
-
-  .crs-header, .crs-navlist, .crs-navlist-item-a {
-    padding: 0 10px 0 10px;
-  }
-
-  .crs-navlist-item-rightend {
-    display: none;
-  }
-
-  .crs-sidebar {
-    float: left;
-    width: 100%;
-  }
-}
-/* End Media Query Section */
