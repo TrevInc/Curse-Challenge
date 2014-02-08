@@ -120,6 +120,8 @@ body {
   font-size: 13px;
   line-height: 140%;
   min-width: 500px;
+  position: relative;
+  top: -4px;
 }
 
 ul li {
@@ -185,10 +187,16 @@ ul li {
   list-style-type: none;
   position: absolute;
   right: 100px;
-  margin-top: 35px;
+  margin-top: 34px;
   /* negative half of the height */
 }
 
+/* Firefox specific pixel-perfect issue */
+@-moz-document url-prefix() {
+  .crs-navlist {
+    margin-top: 33px;
+  }
+}
 .crs-header {
   background: none repeat scroll 0 0 #444444;
   font-weight: 600;
@@ -254,7 +262,7 @@ ul li {
   color: black;
   background: #c5c5c5;
   font-size: 9pt;
-  font-weight: 600;
+  font-weight: 500;
   padding: 5px 8px 8px 8px;
 }
 
