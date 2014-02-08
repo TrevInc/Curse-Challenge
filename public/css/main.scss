@@ -148,13 +148,6 @@ ul li {
   /* negative half of the height */
 }
 
-/* Firefox specific pixel-perfect issue */
-@-moz-document url-prefix() {
-
-    .crs-navlist { margin-top: 33px; }
-
-}
-
 .crs-header {
   background: none repeat scroll 0 0 #444444;
   font-weight: 600;
@@ -245,6 +238,13 @@ ul li {
 /* End Main Stylesheet */
 
 /* Begin Media Query Overrides */
+
+/* Firefox specific pixel-perfect issue */
+@-moz-document url-prefix() {
+
+    .crs-navlist { margin-top: 33px; }
+
+}
 
 @media all and (max-width: 940px) {
   .crs-logospace {
