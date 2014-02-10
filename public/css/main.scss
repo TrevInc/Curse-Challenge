@@ -220,7 +220,7 @@ ul li {
     @include box-shadow(inset, 0px, -35px, 35px, #777777);
   }
   .dropdown-menu {
-    display: block;
+    display: block !important;
 	@include moz-border-colors(none);
     background: none repeat scroll 0 0 #333333;
     border: 0px;
